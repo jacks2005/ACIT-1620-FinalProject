@@ -12,6 +12,10 @@
 
 }
 
+*::selection{
+    background-color: rgb(255, 46, 46);
+}
+
 
 html{
     height: 100%;
@@ -20,6 +24,8 @@ html{
 body {
     margin: 0px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 main{
@@ -28,11 +34,17 @@ main{
 
 #fullheader{
     display: grid;
-    grid-template-columns: 2;
+    grid-template-columns: auto auto;
     grid-template-rows: 1;
-    background-color: gray;
-    padding-left: 24px;
-    padding-right: 24px;
+    background-color: rgba(0, 0, 0, 0.219);
+    backdrop-filter: blur(16px);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100px;
+    z-index: 1;
+    padding: 24px;
+    box-sizing: border-box;
 
     #title{
         grid-column: 1;
@@ -40,6 +52,10 @@ main{
         font-family: "Limelight", sans-serif;
         font-weight: 400;
         font-style: normal;
+        color: rgb(173, 0, 0);
+        margin: 0;
+        align-items: center;
+        display: flex;
     }
 
     nav{
@@ -56,6 +72,25 @@ main{
         align-items: center;
         flex-wrap: wrap;
         gap: 30px;
+        padding: 0;
+
+    a {
+        color: rgb(173, 0, 0);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 20px;
+        transition-duration: 300ms;
+
+    }
+
+    a:hover {
+        color: rgb(255, 46, 46);
+        transition-duration: 300ms;
+    }
+}
+
+h1{
+    margin: 0;
 }
 
 }
@@ -83,3 +118,72 @@ main{
     color: white;
 } 
 
+#wrapper {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home_review {
+    display: grid;
+    grid-template-columns: 4 400px;
+    gap: 24px;
+    margin: 20px;
+    margin-bottom: 80px;
+}
+
+.poster {
+    width: 200px;
+    border-radius: 12px;
+    height: fit-content;
+    object-fit: contain;
+    grid-column: 1 / 2;
+}
+
+.quotes {
+    width: 40px;
+    object-fit: contain;
+    height: fit-content;
+    grid-column: 2;
+}
+
+.quotes_r {
+    width: 40px;
+    object-fit: contain;
+    height: fit-content;
+    transform: scale(-1);
+    grid-column: 4;
+}
+
+.review-text {
+    margin: 0;
+    grid-column: 3;
+}
+
+@media (max-width: 800px){
+    .home_review {
+        grid-template-rows: fit-content() fit-content();
+        grid-template-columns: auto auto auto;
+    }
+
+    .poster {
+        grid-row: 1;
+        grid-column: 1 / span 4; /* will fix later */
+    }
+
+    .quotes {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    .quotes_r {
+        grid-row: 2;
+        grid-column: 4;
+    }
+
+    .review-text {
+        grid-row: 2;
+        grid-column: 2;
+        width: 105%;
+    }
+}
