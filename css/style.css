@@ -86,4 +86,90 @@ main{
 /* Posters for Grid */
 .poster img {
     width: 20vw;
+    justify-content: center;
+    
+}
+
+.poster {
+    grid-row: 1 / span 2;
+}
+
+/* Grid containers */
+.container {
+    display: grid;
+    grid-auto-rows: 500px;
+    justify-content: space-between;
+
+}
+
+.nested-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 50px auto;
+    justify-content: start;
+
+}
+
+.film-title {
+    grid-column: 2 / span 3;
+}
+
+.star_rating {
+    /* grid-column: 3; */
+    width: auto;
+    height: 50px;
+    object-fit: cover;
+}
+
+blockquote {
+border:none;
+font-family: "Bebas Neue", sans-serif;
+margin-bottom:-30px;
+position: relative; 
+max-width: 400px; 
+grid-row: 2;
+grid-column: 2 / span 1;
+    
+}
+
+blockquote p {
+    font-size:21px;
+}
+
+blockquote p:before { 
+    content: "\201C";
+    font-weight: bold;
+    font-size:100px;
+    color:#000000;
+    position: absolute; 
+    top: -0.2em;
+    left: -0.5em; 
+    font-family: 'Georgia'; 
+} 
+blockquote p:after { 
+    content: "\201D";
+    font-weight: bold;
+    font-size:100px;
+    color:#000000;
+    position: absolute; 
+    bottom: 1em;
+    right: 1em; 
+    font-family: 'Georgia'; 
+}
+
+
+
+
+/* Testing */
+.anchor_poster {
+    width: 200px;
+    height: 250px;
+
+}
+
+#anchor_container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+
+
 }
