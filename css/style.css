@@ -26,6 +26,10 @@ body {
     flex-direction: column;
 }
 
+html { 
+    overscroll-behavior: none;
+}
+
 main{    
     background-color: var(--cham);
     position: static;
