@@ -62,11 +62,7 @@ main{
     #title{
         grid-column: 1;
         grid-row: 1;
-        font-family: "Limelight", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 3ch;
-        color: var(--pred);
+        background-image: url(images/title.svg);
         margin: 0;
         align-items: center;
         display: flex;
