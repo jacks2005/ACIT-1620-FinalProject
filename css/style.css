@@ -162,7 +162,7 @@ h1{
 } 
 
 
-#wrapper {
+#home-wrapper {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
@@ -170,8 +170,7 @@ h1{
 }
 
 .home_review {
-    display: grid;
-    grid-template-columns: 4 400px;
+    display: flex;
     gap: 24px;
     margin: 20px;
     margin-bottom: 80px;
@@ -182,14 +181,12 @@ h1{
     border-radius: 12px;
     height: fit-content;
     object-fit: contain;
-    grid-column: 1 / 2;
 }
 
 .quotes {
     width: 40px;
     object-fit: contain;
     height: fit-content;
-    grid-column: 2;
 }
 
 .quotes_r {
@@ -197,12 +194,10 @@ h1{
     object-fit: contain;
     height: fit-content;
     transform: scale(-1);
-    grid-column: 4;
 }
 
 .review-text {
     margin: 0;
-    grid-column: 3;
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -212,29 +207,39 @@ h1{
 }
 
 @media (max-width: 800px){
-    .home_review {
-        grid-template-rows: fit-content() fit-content();
-        grid-template-columns: auto auto auto;
-    }
-
-    .poster {
-        grid-row: 1;
-        grid-column: 1 / span 4; /* will fix later */
-    }
 
     .quotes {
-        grid-row: 2;
-        grid-column: 1;
+        display: none;
     }
 
     .quotes_r {
-        grid-row: 2;
-        grid-column: 4;
+        display: none;
     }
 
     .review-text {
-        grid-row: 2;
-        grid-column: 2;
-        width: 105%;
+        width: 100%;
     }
+}
+
+@media (max-width: 500px){
+    .poster {
+        width: 100%;
+    }
+
+    .home_review {
+        padding: 1em;
+        background-color: var(--beige);
+        border-radius: 20px;
+        flex-direction: column;
+        margin-bottom: 1em;
+    }
+
+    .review-text {
+        width: 100%;
+    }
+
+    #home-wrapper {
+        margin-top: 1em;
+    }
+
 }
