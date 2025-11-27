@@ -20,6 +20,7 @@
     --cham: #F6EFD2;
     --pred: #E43636;
     --beige: #E2DDB4;
+    --cadyellow: #FDDA0D;
 
 }
 
@@ -43,6 +44,7 @@ main{
     position: static;
 }
 
+/* Header */
 #fullheader{
     display: grid;
     grid-template-columns: auto auto;
@@ -236,5 +238,39 @@ h1{
         grid-row: 2;
         grid-column: 2;
         width: 105%;
+    }
+}
+
+/*Footer*/
+
+#footcontact{
+    padding: 0 5%;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color:var(--cham)
+}
+footer{
+    background-color: var(--pred);
+    ul {
+        text-decoration: none;
+        color: var(--cham);
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5%;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        list-style-type: none;
+
+        a{
+            text-decoration: none;
+            color: var(--cham);
+            transition-duration: 400ms;
+        }
+
+        a:hover{
+            color: var(--cadyellow);
+        }
     }
 }
