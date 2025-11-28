@@ -47,7 +47,7 @@ main{
 /* Header */
 #fullheader{
     display: grid;
-    grid-template-columns: auto 30em; 
+    grid-template-columns: auto 33em; 
     grid-template-rows: 1;
     background-color: rgba(0, 0, 0, 0);
     backdrop-filter: blur(16px);
@@ -224,8 +224,9 @@ h1{
 }
 
 @media (max-width: 700px) {
-    #title{
+    #fullheader #title{
         background-image: url(../images/favicon.svg);
+        max-width: 5.5em;
     }
 }
 
