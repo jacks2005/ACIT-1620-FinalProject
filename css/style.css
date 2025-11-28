@@ -83,10 +83,15 @@ main{
     color: white;
 } 
 
+
+
+
 /* Posters for Grid */
 .poster img {
-    width: 20vw;
+    height: 400px;
+    width: auto;
     justify-content: center;
+    margin: 10%;
     
 }
 
@@ -95,9 +100,9 @@ main{
 }
 
 /* Grid containers */
-.container {
+.reviewcontainer {
     display: grid;
-    grid-auto-rows: 500px;
+    grid-auto-rows: 75vh;
     justify-content: space-between;
 
 }
@@ -105,7 +110,7 @@ main{
 .nested-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-template-rows: 50px auto;
+    grid-template-rows: 5vh auto;
     justify-content: start;
 
 }
@@ -115,10 +120,11 @@ main{
 }
 
 .star_rating {
-    /* grid-column: 3; */
+    grid-column: 3;
     width: auto;
-    height: 50px;
+    height: 40px;
     object-fit: cover;
+    justify-content: start;
 }
 
 blockquote {
@@ -152,8 +158,8 @@ blockquote p:after {
     font-size:100px;
     color:#000000;
     position: absolute; 
-    bottom: 1em;
-    right: 1em; 
+    bottom: 5.9em;
+    right: -1em; 
     font-family: 'Georgia'; 
 }
 
@@ -162,8 +168,8 @@ blockquote p:after {
 
 /* Testing */
 .anchor_poster {
-    width: 200px;
-    height: 250px;
+    width: 10vw;
+    height: 25vh;
 
 }
 
