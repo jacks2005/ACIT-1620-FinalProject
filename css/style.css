@@ -85,19 +85,18 @@ main{
         list-style-type: none;
         justify-content: right;
         align-items: center;
-        flex-wrap: wrap;
         gap: 18px;
         padding: 0;
 
     a {
-        padding: 21px 4ch;
+        padding: 1em 1.75em;
         border-radius: 1ch;
         border: none;
         text-decoration: none;
         font-family: "Bebas Neue", sans-serif;
         font-weight: 400;
         font-style: normal;
-        font-size: 3ch;
+        font-size: min(3.5vw, 3ch);
         border: 4px solid transparent;
         transition-duration: 300ms;
         border-radius: 1ch;
@@ -224,12 +223,14 @@ h1{
 }
 
 @media (max-width: 700px) {
-    #fullheader #title{
+#fullheader {
+    #title{
         background-image: url(../images/favicon.svg);
         max-width: 5.5em;
-    }
+        min-width: 3.5em;
+        background-position: center;
 }
-
+}
 @media (max-width: 500px){
     .poster {
         width: 100%;
