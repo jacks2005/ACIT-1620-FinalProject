@@ -404,8 +404,8 @@ blockquote {
 
 /* Anchor Links */
 .anchor_poster {
-    width: 200px;
-    height: 250px;
+    width: 15vw;
+    height: 20vw;
     border: 3px solid transparent;
     transition: border-color 0.3s ease-in-out;
 
@@ -572,6 +572,7 @@ textarea {
         width: 15em;
         height: 3.5em;
         margin: 1em auto;
+        justify-content: left;
     }
 
     .star_rating {
@@ -588,7 +589,6 @@ textarea {
 
     .anchor_poster {
         width: 35vw;
-        max-width: 160px;
         height: auto;
     }
 
