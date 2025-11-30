@@ -301,16 +301,18 @@ footer {
 .nested-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-template-rows: 15% 60%;
+    grid-template-rows: 5em 1fr;
     justify-content: start;
     padding-left: 0;
     padding-bottom: 4em;
+    row-gap: 0px;
+    height: 75%;
 }
 
 .film_title {
     max-width: 400px;
     display: flex;
-    grid-column: 2 / span 1;
+    grid-column: 2 / span 2;    
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -431,7 +433,7 @@ textarea:hover {
 #anchor_container {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    margin-top: 5em;
+    margin-top: 9em;
     margin-left: 3em;
     margin-bottom: 5em;
 }
@@ -558,6 +560,10 @@ textarea {
         width: 100%;
     }
 
+    .reviewposter{
+        align-self: center;
+    }
+
     .reviewposter img {
         width: 60vw;
         max-width: 300px;
@@ -572,7 +578,7 @@ textarea {
     blockquote {
         max-width: 100%;
         margin: 0 1em;
-        text-align: center;
+        text-align: left;
     }
 
     .card {
@@ -649,4 +655,7 @@ textarea {
         padding-left: 0.6em;
     }
 
+    #anchor_container {
+        margin-top: 5em;
+    }
 }
