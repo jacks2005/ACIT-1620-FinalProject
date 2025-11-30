@@ -416,7 +416,7 @@ blockquote {
 
 /* Anchor Links */
 .anchor_poster {
-    width: 15vw;
+    width: calc(100% - 6px);
     border: 3px solid transparent;
     transition: border-color 0.3s ease-in-out;
     border-radius: 1em;
@@ -436,9 +436,13 @@ textarea:hover {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
     margin-top: 9em;
-    margin-left: 3em;
+    margin-left: 2rem;
+    margin-right: 2rem;
     margin-bottom: 5em;
     align-items: center;
+    /* max-width: 90rem; */
+    gap: 2rem;
+    box-sizing: border-box;
 }
 
 #OneBattle,
@@ -608,12 +612,7 @@ textarea {
     #anchor_container {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         justify-items: center;
-        margin-left: 0;
         gap: 1.5em;
-    }
-
-    .anchor_poster {
-        width: 25vw;
     }
 
     #title {
@@ -652,6 +651,12 @@ textarea {
 
     #home-wrapper {
         margin-top: 1em;
+    }
+
+    #anchor_container {
+        grid-template-columns: auto auto;
+        /* grid-template-rows: 20rem 20rem 20rem; */
+        gap: 1.5em;
     }
 }
 
