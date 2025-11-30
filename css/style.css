@@ -1,175 +1,340 @@
-:root{
+:root {
     .limelight-regular {
         font-family: "Limelight", sans-serif;
         font-weight: 400;
         font-style: normal;
-}
+    }
+
     .bebas-neue-regular {
         font-family: "Bebas Neue", sans-serif;
         font-weight: 400;
         font-style: normal;
-}
+    }
+
+    .roboto-normal {
+        font-family: "Roboto", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+    }
+
+    --cham: #F6EFD2;
+    --pred: #E43636;
+    --beige: #E2DDB4;
+    --cadyellow: #FDDA0D;
+    --strawberry: #e38e8e;
 
 }
 
-
-html{
-    height: 100%;
+*::selection {
+    background-color: var(--pred);
+    color: var(--cham);
 }
 
 body {
     margin: 0px;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-main{
-    height: 100%
+html {
+    background-color: black;
 }
 
-#fullheader{
+main {
+    background-color: var(--cham);
+    position: static;
+}
+
+/* Header */
+#fullheader {
     display: grid;
-    grid-template-columns: 2;
-    grid-template-rows: 1;
-    background-color: gray;
-    padding-left: 24px;
-    padding-right: 24px;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(16px);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 120px;
+    z-index: 1;
+    padding: 0 1em 0 2em;
+    box-sizing: border-box;
 
-    #title{
+    #title {
         grid-column: 1;
         grid-row: 1;
-        font-family: "Limelight", sans-serif;
-        font-weight: 400;
-        font-style: normal;
+        background-image: url(../images/title.svg);
+        align-items: center;
+        display: flex;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        max-width: 30em;
     }
 
-    nav{
+    nav {
+        margin-left: 10px;
         height: 100%;
         grid-column: 2;
         grid-row: 1;
     }
-    #navmenu{
+
+    #navmenu {
         margin: 0px;
         height: 100%;
         display: flex;
         list-style-type: none;
         justify-content: right;
         align-items: center;
-        flex-wrap: wrap;
-        gap: 30px;
-}
+        gap: 1rem;
+        padding: 0;
+
+        a {
+            padding: 1em 1.75em;
+            border-radius: 1ch;
+            border: none;
+            text-decoration: none;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: min(3.5vw, 3ch);
+            border: 4px solid transparent;
+            transition-duration: 300ms;
+            border-radius: 1ch;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        a:hover {
+            border-radius: 2ch;
+        }
+
+        .navbutton {
+            background-color: var(--beige);
+            color: var(--pred);
+        }
+
+        .navbutton:hover {
+            border: 4px solid var(--pred);
+        }
+
+        .currentbutton {
+            background-color: var(--pred);
+            color: var(--beige);
+            border: 4px solid var(--pred);
+        }
+
+        .currentbutton:hover {
+            border: 4px solid var(--beige);
+        }
+
+        .currentbutton::selection {
+            background-color: var(--cham);
+            color: var(--pred);
+        }
+    }
+
+    h1 {
+        margin: 0;
+    }
 
 }
 
 /* Hero Banner CSS */
-.hero_image{
+.hero_image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/avengers_hero_banner.jpg");
-    height: 50%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    height: 500px;
+    position: static;
     overflow: auto;
+    top: 0px;
 }
 
-.hero_text{
+.hero_text {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 4ch;
     text-align: center;
     position: absolute;
-    top: 50%;
+    top: 8em;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-} 
 
-/* Posters for Grid */
-.poster img {
-    width: 20vw;
-    justify-content: center;
-    
+    h1 {
+        font-size: 6ch;
+    }
+}
+
+
+#home-wrapper {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6ch;
+}
+
+.home_review {
+    display: flex;
+    gap: 24px;
+    margin: 1em;
+    margin-bottom: 80px;
 }
 
 .poster {
-    grid-row: 1 / span 2;
-}
-
-/* Grid containers */
-.container {
-    display: grid;
-    grid-auto-rows: 500px;
-    justify-content: space-between;
-
-}
-
-.nested-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 50px auto;
-    justify-content: start;
-
-}
-
-.film-title {
-    grid-column: 2 / span 3;
-}
-
-.star_rating {
-    /* grid-column: 3; */
-    width: auto;
-    height: 50px;
-    object-fit: cover;
-}
-
-blockquote {
-border:none;
-font-family: "Bebas Neue", sans-serif;
-margin-bottom:-30px;
-position: relative; 
-max-width: 400px; 
-grid-row: 2;
-grid-column: 2 / span 1;
-    
-}
-
-blockquote p {
-    font-size:21px;
-}
-
-blockquote p:before { 
-    content: "\201C";
-    font-weight: bold;
-    font-size:100px;
-    color:#000000;
-    position: absolute; 
-    top: -0.2em;
-    left: -0.5em; 
-    font-family: 'Georgia'; 
-} 
-blockquote p:after { 
-    content: "\201D";
-    font-weight: bold;
-    font-size:100px;
-    color:#000000;
-    position: absolute; 
-    bottom: 1em;
-    right: 1em; 
-    font-family: 'Georgia'; 
-}
-
-
-
-
-/* Testing */
-.anchor_poster {
     width: 200px;
-    height: 250px;
+    border-radius: 12px;
+    height: fit-content;
+    object-fit: contain;
+    user-select: none;
+}
+
+.quotes {
+    width: 40px;
+    object-fit: contain;
+    height: fit-content;
+}
+
+.quotes_r {
+    width: 40px;
+    object-fit: contain;
+    height: fit-content;
+    transform: scale(-1);
+}
+
+.review-text {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+#footcontact {
+    padding: 0 5%;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--cham)
+}
+
+footer {
+    background-color: var(--pred);
+    padding-bottom: 1em;
+
+    ul {
+        text-decoration: none;
+        color: var(--cham);
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5%;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        list-style-type: none;
+
+        a {
+            text-decoration: none;
+            color: var(--cham);
+            transition-duration: 400ms;
+        }
+
+        a:hover {
+            color: var(--cadyellow);
+        }
+    }
+
+    p {
+        margin-top: 2em;
+        padding: 0 5%;
+        font-size: 0.75em;
+        font-family: "Roboto", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+        color: var(--strawberry)
+    }
+
+    a::selection,
+    p::selection,
+    h2::selection {
+        background-color: var(--cham);
+        color: var(--pred);
+    }
 
 }
 
-#anchor_container {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
+@media (max-width: 800px) {
 
+    .quotes {
+        display: none;
+    }
 
+    .quotes_r {
+        display: none;
+    }
+
+    .review-text {
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    #fullheader {
+        #title {
+            background-image: url(../images/favicon.svg);
+            max-width: 5.5em;
+            min-width: 50px;
+            background-position: center;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    #fullheader #navmenu a {
+        padding: 0.25em;
+        font-size: 1.4em;
+    }
+
+    #fullheader {
+        height: 70px;
+        padding-left: 0.6em;
+    }
+
+    #title {
+        margin-top: 0.75em;
+        margin-bottom: 0.75em;
+    }
+}
+
+@media (max-width: 500px) {
+    .poster {
+        width: 100%;
+    }
+
+    .home_review {
+        padding: 1em;
+        background-color: var(--beige);
+        border-radius: 20px;
+        flex-direction: column;
+        margin-bottom: 1em;
+    }
+
+    .review-text {
+        width: 100%;
+    }
+
+    #home-wrapper {
+        margin-top: 1em;
+    }
 }
