@@ -105,8 +105,8 @@ main {
             border-radius: 1ch;
             margin-top: auto;
             margin-bottom: auto;
-        }
-
+    
+    }
         a:hover {
             border-radius: 2ch;
         }
@@ -301,6 +301,8 @@ grid-column: 2 / span 3;
     
     
 
+input:hover, textarea:hover {
+    background: #c5bfa8
 }
 
 .anchor_poster:hover {
