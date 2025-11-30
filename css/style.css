@@ -275,6 +275,18 @@ footer {
 
 }
 
+/* Posters for Grid */
+.reviewposter img {
+    width: 15vw;
+    justify-content: center;
+    margin-bottom: 3em;
+    
+}
+
+.reviewposter {
+    grid-row: 1 / span 2;
+}
+
 .nested-container {
     display: grid;
     grid-template-columns: auto auto auto;
