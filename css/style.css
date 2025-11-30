@@ -289,6 +289,7 @@ footer {
     width: 15vw;
     justify-content: center;
     margin-bottom: 3em;
+    border-radius: 1em;
     
 }
 
@@ -413,11 +414,9 @@ blockquote {
 /* Anchor Links */
 .anchor_poster {
     width: 15vw;
-    height: 20vw;
     border: 3px solid transparent;
     transition: border-color 0.3s ease-in-out;
-
-
+    border-radius: 1em;
 }
 
 input:hover,
@@ -436,6 +435,7 @@ textarea:hover {
     margin-top: 9em;
     margin-left: 3em;
     margin-bottom: 5em;
+    align-items: center;
 }
 
 #OneBattle,
@@ -464,7 +464,8 @@ textarea:hover {
     justify-content: center;
     max-width: 500px;
     margin: 0px auto 0px auto;
-    padding-top: 15px
+    padding-top: 15px;
+    gap: 1em;
 }
 
 input {
@@ -475,7 +476,7 @@ input {
 
     background: transparent;
     outline: none;
-    border: solid 1px #e43636;
+    border: solid 2px #e43636;
 
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -492,7 +493,7 @@ textarea {
     background: transparent;
     outline: none;
 
-    border: solid 1px #e43636;
+    border: solid 2px #e43636;
 
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -507,6 +508,7 @@ textarea {
     font-size: 13px;
     font-variation-settings:
         "wdth" 100;
+    resize: vertical;
 }
 
 #contactmain h2 {
@@ -524,12 +526,16 @@ textarea {
     outline: none;
     cursor: pointer;
 
-    border: solid 1px #e43636;
+    border: solid 2px #e43636;
 }
 
 #submit:hover {
     background: #c5bfa8;
 }
+
+form input, textarea {
+    border-radius: 1em;
+} 
 
 @media (max-width: 800px) {
 
@@ -602,7 +608,6 @@ textarea {
 
     .anchor_poster {
         width: 25vw;
-        height: 37.5vw;
     }
 
     #title {
