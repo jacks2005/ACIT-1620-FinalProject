@@ -1,3 +1,4 @@
+/* Imported fonts from Google Fonts */
 :root {
     .limelight-regular {
         font-family: "Limelight", sans-serif;
@@ -19,7 +20,7 @@
         font-variation-settings:
             "wdth" 100;
     }
-
+    /* Pre-set colour values for easy and consistent design */
     --cham: #F6EFD2;
     --pred: #E43636;
     --beige: #E2DDB4;
@@ -28,6 +29,7 @@
 
 }
 
+/* Controls colour of selected text */
 *::selection {
     background-color: var(--pred);
     color: var(--cham);
@@ -39,6 +41,7 @@ body {
     flex-direction: column;
 }
 
+/* Makes overscroll look better than white with the dark hero image and red footer */
 html {
     background-color: black;
 }
@@ -173,7 +176,7 @@ main {
     }
 }
 
-
+/* Home Page */
 #home-wrapper {
     max-width: 90rem;
     margin-left: auto;
@@ -236,6 +239,7 @@ main {
     color: var(--cham)
 }
 
+/* Footer */
 footer {
     background-color: var(--pred);
     padding-bottom: 1em;
@@ -556,6 +560,7 @@ textarea {
     border-radius: 1em;
 }
 
+/* Media queries for responsive design */
 @media (max-width: 800px) {
 
     .quotes,
